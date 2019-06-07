@@ -47,13 +47,13 @@ body > div {
 }
 
 .xbox-background {
-    background-image: url('/static/images/xbox-background.jpg');
+    background-color: #44bd32;
 }
 
 .pc-background {
-    background-image: url('/static/images/windows-background.jpg');
+    background-color: #00a8ff;
 }
 
 .playstation-background {
-    background-image: url('/static/images/playstation-background.jpg');
+    background-color: #0097e6;
 }
