@@ -1,0 +1,72 @@
+html {
+    margin: 0;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+body > div {
+    flex: 1;
+    display: inline;
+}
+
+.platform {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 3;
+}
+
+.logo:hover + div {
+    filter: blur(2px);
+}
+
+.logo > img {
+    height: 200px;
+    width: 200px;
+}
+
+.platform-xbox-background {
+    background-image: url('/static/images/xbox-background.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.platform-xbox-background:hover {
+    filter: blur(2px);
+}
+
+.platform-pc-background {
+    background-image: url('/static/images/windows-background.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.platform-pc-background:hover {
+    filter: blur(2px);
+}
+
+.platform-playstation-background {
+    background-image: url('/static/images/playstation-background.jpg');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.platform-playstation-background:hover {
+    filter: blur(2px);
+}
