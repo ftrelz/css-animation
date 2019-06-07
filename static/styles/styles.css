@@ -9,51 +9,15 @@ body {
     display: flex;
 }
 
-body > div {
-    flex: 1;
-    display: inline;
-}
-
-.platform {
-    position: relative;
-}
-
-.platform-background {
-    position: absolute;
-    height: 100%;
+.logos {
     width: 100%;
-    z-index: 2;
-}
-
-.platform-background:hover {
-    filter: brightness(1.25);
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 3;
-}
-
-.logo:hover + div {
-    filter: brightness(1.25);
-}
-
-.logo > img {
     height: 200px;
     width: 200px;
-}
-
-.xbox-background {
-    background-color: #44bd32;
-}
-
-.pc-background {
-    background-color: #00a8ff;
-}
-
-.playstation-background {
-    background-color: #0097e6;
 }
