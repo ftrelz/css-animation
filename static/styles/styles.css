@@ -18,6 +18,18 @@ body > div {
     position: relative;
 }
 
+.platform-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(25%);
+    z-index: 2;
+}
+
+.platform-background:hover {
+    filter: grayscale(0%)
+}
+
 .logo {
     position: absolute;
     left: 50%;
@@ -27,7 +39,7 @@ body > div {
 }
 
 .logo:hover + div {
-    filter: blur(2px);
+    filter: grayscale(0%);
 }
 
 .logo > img {
@@ -35,38 +47,14 @@ body > div {
     width: 200px;
 }
 
-.platform-xbox-background {
+.xbox-background {
     background-image: url('/static/images/xbox-background.jpg');
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
 }
 
-.platform-xbox-background:hover {
-    filter: blur(2px);
-}
-
-.platform-pc-background {
+.pc-background {
     background-image: url('/static/images/windows-background.jpg');
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
 }
 
-.platform-pc-background:hover {
-    filter: blur(2px);
-}
-
-.platform-playstation-background {
+.playstation-background {
     background-image: url('/static/images/playstation-background.jpg');
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-
-.platform-playstation-background:hover {
-    filter: blur(2px);
 }
