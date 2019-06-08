@@ -21,6 +21,21 @@ body {
     background: linear-gradient(to right top, #44bd32 50%, #2f3640 50%);
 }
 
+.top-gradient:hover {
+    flex: 1;
+    animation-name: a1;
+}
+
+@keyframes a1 {
+    from {
+        background: linear-gradient(to right top, #44bd32 50%, #2f3640 50%);
+    }
+
+    to {
+        background: linear-gradient(to left bottom, #44bd32 50%, #2f3640 50%);
+    }
+}
+
 .top-middle-gradient {
     flex: 1;
     background: linear-gradient(to right bottom, #44bd32 50%, #00a8ff 50%);
