@@ -6,54 +6,93 @@ html {
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
 }
 
-body > div {
-    flex: 1;
-    display: inline;
-}
-
-.platform {
-    position: relative;
-}
-
-.platform-background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-
-.platform-background:hover {
-    filter: brightness(1.25);
-}
-
-.logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 3;
-}
-
-.logo:hover + div {
-    filter: brightness(1.25);
-}
-
-.logo > img {
+.logo{
     height: 200px;
     width: 200px;
 }
 
-.xbox-background {
-    background-image: url('/static/images/xbox-background.jpg');
+.platform-xbox {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
+    background-color: #44bd32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.pc-background {
-    background-image: url('/static/images/windows-background.jpg');
+.platform-xbox-selected {
+    animation-name: select-xbox;
+    animation-duration: .75s;
+    z-index: 2;
 }
 
-.playstation-background {
-    background-image: url('/static/images/playstation-background.jpg');
+@keyframes select-xbox {
+    from {
+        width: 33.33%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.platform-pc {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
+    background-color: #00a8ff;
+    left: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-pc-selected {
+    animation-name: select-pc;
+    animation-duration: .75s;
+    z-index: 2;
+}
+
+@keyframes select-pc {
+    from {
+        left: 33.33%;
+        width: 33.33%;
+    }
+
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}
+
+.platform-playstation {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
+    background-color: #0097e6;
+    left: 66.66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.platform-playstation-selected {
+    animation-name: select-ps4;
+    animation-duration: .75s;
+    z-index: 2;
+}
+
+@keyframes select-ps4 {
+    from {
+        left: 66.66%;
+        width: 33.33%;
+    }
+
+    to {
+        left: 0%;
+        width: 100%;
+    }
 }
