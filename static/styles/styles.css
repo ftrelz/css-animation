@@ -21,22 +21,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: width;
+    transition-duration: 750ms;
 }
 
 .platform-xbox-selected {
-    animation-name: select-xbox;
-    animation-duration: .75s;
+    width: 100%;
     z-index: 2;
-}
-
-@keyframes select-xbox {
-    from {
-        width: 33.33%;
-    }
-
-    to {
-        width: 100%;
-    }
 }
 
 .platform-pc {
@@ -48,24 +39,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: width, left;
+    transition-duration: 750ms;
 }
 
 .platform-pc-selected {
-    animation-name: select-pc;
-    animation-duration: .75s;
+    left: 0%;
+    width: 100%;
     z-index: 2;
-}
-
-@keyframes select-pc {
-    from {
-        left: 33.33%;
-        width: 33.33%;
-    }
-
-    to {
-        left: 0%;
-        width: 100%;
-    }
 }
 
 .platform-playstation {
@@ -77,22 +58,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: width, left;
+    transition-duration: 750ms;
 }
 
 .platform-playstation-selected {
-    animation-name: select-ps4;
-    animation-duration: .75s;
+    left: 0%;
+    width: 100%;
     z-index: 2;
-}
-
-@keyframes select-ps4 {
-    from {
-        left: 66.66%;
-        width: 33.33%;
-    }
-
-    to {
-        left: 0%;
-        width: 100%;
-    }
 }
