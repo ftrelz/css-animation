@@ -1,72 +1,71 @@
 html {
-    margin: 0;
-    height: 100vh;
+  margin: 0;
+  height: 100vh;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
+  margin: 0;
+  height: 100%;
 }
 
-.logo{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.logo {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo-bounce {
-    animation-name: logo-bounce;
-    animation-duration: 1500ms;
+  animation-name: logo-bounce;
+  animation-duration: 1000ms;
 }
 
 @keyframes logo-bounce {
-    0% {
-        top: 50%;
-    }
-
-    10% {
-        top: 60%;
-    }
-
-    100% {
-        top: -30%;
-    }
+  0% {
+    top: 50%;
+  }
+  35% {
+    top: 60%;
+  }
+  100% {
+    top: -30%;
+  }
 }
-
-.platform {
-    position: absolute;
-    height: 100%;
-    width: 33.33%;
+.platform-playstation, .platform-pc, .platform-xbox {
+  position: absolute;
+  height: 100%;
+  width: 33.33%;
 }
 
 .platform-xbox {
-    background-color: #44bd32;
-    transition-property: width;
-    transition-duration: 750ms;
-    transition-timing-function: cubic-bezier(.19, .52, .23, 1);
+  background-color: #44bd32;
+  transition-property: width;
+  transition-duration: 750ms;
+  transition-timing-function: cubic-bezier(0.19, 0.52, 0.23, 1);
 }
 
 .platform-pc {
-    background-color: #00a8ff;
-    left: 33.33%;
-    transition-property: width, left;
-    transition-duration: 750ms;
-    transition-timing-function: cubic-bezier(.19, .52, .23, 1);
+  background-color: #40739e;
+  left: 33.33%;
+  transition-property: width, left;
+  transition-duration: 750ms;
+  transition-timing-function: cubic-bezier(0.19, 0.52, 0.23, 1);
 }
 
 .platform-playstation {
-    background-color: #0097e6;
-    left: 66.66%;
-    transition-property: width, left;
-    transition-duration: 750ms;
-    transition-timing-function: cubic-bezier(.19, .52, .23, 1);
+  background-color: #0097e6;
+  left: 66.66%;
+  transition-property: width, left;
+  transition-duration: 750ms;
+  transition-timing-function: cubic-bezier(0.19, 0.52, 0.23, 1);
 }
 
 .platform-selected {
-    left: 0%;
-    width: 100%;
-    z-index: 2;
+  left: 0%;
+  width: 100%;
+  z-index: 2;
 }
+
+/*# sourceMappingURL=styles.css.map */

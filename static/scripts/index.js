@@ -9,6 +9,7 @@ function setLogoBounce(platform) {
     const classes = logo.getAttribute('class')
     logo.setAttribute('class', classes + ' logo-bounce')
 }
+
 window.onload = function() {
     const bounceDelay = 300
 
