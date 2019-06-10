@@ -1,13 +1,32 @@
 window.onload = function() {
+    const bounceDelay = 300
     document.getElementsByClassName('platform-xbox').item(0).onclick = function(event) {
-        event.target.setAttribute('class', 'platform-xbox platform-xbox-selected')
+        setTimeout(function() {
+            const logo = document.querySelector('.platform-xbox > .logo')
+            const classes = logo.getAttribute('class')
+            logo.setAttribute('class', classes + ' logo-bounce')
+        }, bounceDelay)
+        const classes = event.target.getAttribute('class')
+        event.target.setAttribute('class', classes + ' platform-selected')
     }
 
     document.getElementsByClassName('platform-pc').item(0).onclick = function(event) {
-        event.target.setAttribute('class', 'platform-pc platform-pc-selected')
+        setTimeout(function() {
+            const logo = document.querySelector('.platform-pc > .logo')
+            const classes = logo.getAttribute('class')
+            logo.setAttribute('class', classes + ' logo-bounce')
+        }, bounceDelay)
+        const classes = event.target.getAttribute('class')
+        event.target.setAttribute('class', classes + ' platform-selected')
     }
 
     document.getElementsByClassName('platform-playstation').item(0).onclick = function(event) {
-        event.target.setAttribute('class', 'platform-playstation platform-playstation-selected')
+        setTimeout(function() {
+            const logo = document.querySelector('.platform-playstation > .logo')
+            const classes = logo.getAttribute('class')
+            logo.setAttribute('class', classes + ' logo-bounce')
+        }, bounceDelay)
+        const classes = event.target.getAttribute('class')
+        event.target.setAttribute('class', classes + ' platform-selected')
     }
 }

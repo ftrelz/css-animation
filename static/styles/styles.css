@@ -9,60 +9,63 @@ body {
 }
 
 .logo{
+    position: absolute;
     height: 200px;
     width: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-bounce {
+    animation-name: logo-bounce;
+    animation-duration: 1500ms;
+}
+
+@keyframes logo-bounce {
+    0% {
+        top: 50%;
+    }
+
+    10% {
+        top: 60%;
+    }
+
+    100% {
+        top: -30%;
+    }
+}
+
+.platform {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
 }
 
 .platform-xbox {
-    position: absolute;
-    height: 100%;
-    width: 33.33%;
     background-color: #44bd32;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition-property: width;
     transition-duration: 750ms;
-}
-
-.platform-xbox-selected {
-    width: 100%;
-    z-index: 2;
+    transition-timing-function: ease-in-out;
 }
 
 .platform-pc {
-    position: absolute;
-    height: 100%;
-    width: 33.33%;
     background-color: #00a8ff;
     left: 33.33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition-property: width, left;
     transition-duration: 750ms;
-}
-
-.platform-pc-selected {
-    left: 0%;
-    width: 100%;
-    z-index: 2;
+    transition-timing-function: ease-in-out;
 }
 
 .platform-playstation {
-    position: absolute;
-    height: 100%;
-    width: 33.33%;
     background-color: #0097e6;
     left: 66.66%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition-property: width, left;
     transition-duration: 750ms;
+    transition-timing-function: ease-in-out;
 }
 
-.platform-playstation-selected {
+.platform-selected {
     left: 0%;
     width: 100%;
     z-index: 2;
